@@ -3,7 +3,11 @@ import './App.css';
 
 function App() {
 
-  const stately = useState(25)
+  const [stately, setStately] = useState(25)
+
+  function handleStateClick() {
+    setStately(30)
+  }
 
   return (
     <div className="App">
@@ -12,6 +16,7 @@ function App() {
           I'm Mary Poppins Y'All!
         </p>
         <p>{stately}</p>
+        <button onClick={handleStateClick}>Change to 30</button>
       </main>
     </div>
   );
