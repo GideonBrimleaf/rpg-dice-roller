@@ -35,7 +35,7 @@ function App() {
         <ul className="Dice-Container">
           {diceResults}
         </ul>
-        <button className="Dice-Roller" onClick={rollAllDice}>Roll all Dice</button>
+        <button className="Dice-Roller" onClick={rollAllDice}>Roll the Dice!</button>
       </main>
     </div>
   );
