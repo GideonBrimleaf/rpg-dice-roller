@@ -3,10 +3,11 @@ import './App.css';
 
 function App() {
 
-  const [stately, setStately] = useState(25)
+  const [dice, setDice] = useState([1,2,3,4,5,6])
+  let [dieValue, setDieValue] = useState(dice[Math.floor(Math.random() * dice.length)])
 
-  function handleStateClick() {
-    setStately(30)
+  function diceRoll() {
+    setDieValue(dice[Math.floor(Math.random() * dice.length)])
   }
 
   return (
@@ -15,8 +16,8 @@ function App() {
         <p>
           I'm Mary Poppins Y'All!
         </p>
-        <p>{stately}</p>
-        <button onClick={handleStateClick}>Change to 30</button>
+        <p>{dieValue}</p>
+        <button onClick={diceRoll}>Roll the Dice</button>
       </main>
     </div>
   );
