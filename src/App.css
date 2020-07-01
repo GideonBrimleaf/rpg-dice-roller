@@ -37,7 +37,7 @@
   width: 100px;
   height: 100px;
   border-radius: 10%;
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 
 .Die-Value {
@@ -45,7 +45,7 @@
 }
 
 .Dice-Roller {
-  display: inline-block;
+  display: block;
   padding: (0.3em, 1.2em);
   margin: 0 0.1em 0.1em 0;
   border: 0.16em solid rgba(255,255,255,0);
@@ -57,4 +57,8 @@
   text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
   text-align:center;
   transition: all 0.2s;
+}
+
+.Dice-Container {
+  display: flex;
 }

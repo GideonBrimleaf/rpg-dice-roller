@@ -32,10 +32,10 @@ function App() {
         Welcome to the Fate Dice Roller!
       </header>
       <main>
-        <button className="Dice-Roller" onClick={rollAllDice}>Roll all Dice</button>
-        <ul>
+        <ul className="Dice-Container">
           {diceResults}
         </ul>
+        <button className="Dice-Roller" onClick={rollAllDice}>Roll all Dice</button>
       </main>
     </div>
   );
