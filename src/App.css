@@ -28,6 +28,12 @@
   color: #61dafb;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .Dice {
   display: flex;
   justify-content: center;
@@ -45,7 +51,7 @@
 }
 
 .Dice-Roller {
-  display: block;
+  display: inline-block;
   padding: (0.3em, 1.2em);
   margin: 0 0.1em 0.1em 0;
   border: 0.16em solid rgba(255,255,255,0);
