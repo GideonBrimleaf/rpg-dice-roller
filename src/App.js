@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
 
-  const [dice, setDice] = useState(["+","-"," "])
+  const [dice] = useState(["+","-"," "])
   let [dieValue, setDieValue] = useState(dice[Math.floor(Math.random() * dice.length)])
 
   function diceRoll() {
@@ -19,7 +19,7 @@ function App() {
         <div className="Dice">
           <span className="Die-Value">{dieValue}</span>
         </div>
-        <button onClick={diceRoll}>Roll the Dice</button>
+        <button className="Dice-Roller" onClick={diceRoll}>Roll the Dice</button>
       </main>
     </div>
   );
