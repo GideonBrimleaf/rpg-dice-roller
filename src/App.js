@@ -3,11 +3,24 @@ import './App.css';
 
 function App() {
 
-  const [dice] = useState(["+","-"," "])
-  let [dieValue, setDieValue] = useState(dice[Math.floor(Math.random() * dice.length)])
+  const [diceValues] = useState(["+","-"," "])
+  const [dieValue, setDieValue] = useState(diceValues[Math.floor(Math.random() * diceValues.length)])
+  const [dice, setDice] = useState([
+    {"currentValue" : diceValues[Math.floor(Math.random() * diceValues.length)]},
+    {"currentValue" : diceValues[Math.floor(Math.random() * diceValues.length)]},
+    {"currentValue" : diceValues[Math.floor(Math.random() * diceValues.length)]},
+    {"currentValue" : diceValues[Math.floor(Math.random() * diceValues.length)]}
+  ])
 
   function diceRoll() {
-    setDieValue(dice[Math.floor(Math.random() * dice.length)])
+    setDieValue(diceValues[Math.floor(Math.random() * diceValues.length)])
+  }
+
+  function rollAllDice() {
+    const newRoll = dice.map( 
+      () => ({"currentValue" : diceValues[Math.floor(Math.random() * diceValues.length)]})
+    )
+    setDice(newRoll)
   }
 
   return (
@@ -20,6 +33,7 @@ function App() {
           <span className="Die-Value">{dieValue}</span>
         </div>
         <button className="Dice-Roller" onClick={diceRoll}>Roll the Dice</button>
+        <button className="Dice-Roller" onClick={rollAllDice}>Roll all Dice</button>
       </main>
     </div>
   );
