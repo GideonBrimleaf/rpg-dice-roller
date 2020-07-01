@@ -37,6 +37,9 @@ function App() {
         </ul>
         <button className="Dice-Roller" onClick={rollAllDice}>Roll the Dice!</button>
       </main>
+      <aside>
+        For use with the <a href="https://www.evilhat.com/home/fate-core/">Fate RPG system by Evil Hat Games</a>
+      </aside>
     </div>
   );
 }
