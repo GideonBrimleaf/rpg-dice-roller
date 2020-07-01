@@ -4,7 +4,6 @@ import './App.css';
 function App() {
 
   const [diceValues] = useState(["+","-"," "])
-  const [dieValue, setDieValue] = useState(diceValues[Math.floor(Math.random() * diceValues.length)])
   const [dice, setDice] = useState([
     {"currentValue" : diceValues[Math.floor(Math.random() * diceValues.length)]},
     {"currentValue" : diceValues[Math.floor(Math.random() * diceValues.length)]},
@@ -12,11 +11,8 @@ function App() {
     {"currentValue" : diceValues[Math.floor(Math.random() * diceValues.length)]}
   ])
 
-  function diceRoll() {
-    setDieValue(diceValues[Math.floor(Math.random() * diceValues.length)])
-  }
 
-  function rollAllDice() {
+  const rollAllDice = () => {
     const newRoll = dice.map( 
       () => ({"currentValue" : diceValues[Math.floor(Math.random() * diceValues.length)]})
     )
@@ -30,9 +26,8 @@ function App() {
           I'm Mary Poppins Y'All!
         </p>
         <div className="Dice">
-          <span className="Die-Value">{dieValue}</span>
+          <span className="Die-Value">{dice[0].currentValue}</span>
         </div>
-        <button className="Dice-Roller" onClick={diceRoll}>Roll the Dice</button>
         <button className="Dice-Roller" onClick={rollAllDice}>Roll all Dice</button>
       </main>
     </div>
