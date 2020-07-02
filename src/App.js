@@ -27,19 +27,21 @@ function App() {
   )
 
   return (
-    <div className="App-main">
-      <header>
-        Welcome to the Fate Dice Roller!
-      </header>
-      <main>
-        <ul className="Dice-Container">
-          {diceResults}
-        </ul>
-        <button className="Dice-Roller" onClick={rollAllDice}>Roll the Dice!</button>
-      </main>
-      <aside>
-        For use with the <a href="https://www.evilhat.com/home/fate-core/">Fate RPG system by Evil Hat Games</a>
-      </aside>
+    <div>
+      <section className="App-main">
+        <header>
+          Welcome to the Fate Dice Roller!
+        </header>
+        <main>
+          <ul className="Dice-Container">
+            {diceResults}
+          </ul>
+          <button className="Dice-Roller" onClick={rollAllDice}>Roll the Dice!</button>
+        </main>
+      </section>
+      <footer>
+        For use with the <a className="App-link" href="https://www.evilhat.com/home/fate-core/">Fate RPG system by Evil Hat Games</a>
+      </footer>
     </div>
   );
 }
